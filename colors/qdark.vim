@@ -129,6 +129,7 @@ hi!  link  TagbarVisibilityPublic     Keyword
 hi!  link  TagbarVisibilityProtected  Keyword
 hi!  link  TagbarVisibilityPrivate    Keyword
 
+hi!  link  cStorageClass              Keyword
 hi!  link  cEnumTag                   Type
 hi!  link  cMemberTag                 Type
 hi!  link  cTypeTag                   Type
