@@ -13,8 +13,8 @@ hi  OnDarkBlue        guibg=#0045ff        ctermbg=blue       guifg=#cccccc cter
 hi  OnPurple          guibg=#5555ff        ctermbg=blue       guifg=#cccccc ctermfg=white
 hi  OnRed             guibg=#ff3c3c        ctermbg=red        guifg=#cccccc ctermfg=white
 hi  OnOrange          guibg=#aa5500        ctermbg=darkyellow guifg=#cccccc ctermfg=white
-hi  OnOrangeItalic    guibg=#aa5500        ctermbg=darkyellow guifg=#cccccc ctermfg=white
-hi  OnOrangeItalic    gui=italic           cterm=italic
+hi  ItalicOnLightOrange    guibg=#ee8800        ctermbg=darkyellow guifg=#ffffff ctermfg=white
+hi  ItalicOnLightOrange    gui=italic           cterm=italic
 
 hi  LightGreen        ctermfg=green        guifg=#50ff50
 hi  LightYellow       ctermfg=yellow       guifg=#ffff30
@@ -78,7 +78,7 @@ hi!  link  PMenuSel                   OnGreen
 hi!  link  DiffAdd                    OnGreen
 hi!  link  DiffChange                 OnOrange
 hi!  link  DiffRemove                 OnRed
-hi!  link  DiffText                   OnOrangeItalic
+hi!  link  DiffText                   ItalicOnLightOrange
 hi!  link  Folded                     OnGreen
 hi!  link  StatusLineNormalMode       OnOrange
 hi!  link  StatusLineInsertMode       OnGreen
