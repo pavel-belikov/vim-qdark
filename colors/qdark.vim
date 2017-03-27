@@ -11,7 +11,7 @@ hi  OnGreen           guibg=#086008        ctermbg=darkgreen  guifg=#cccccc cter
 hi  OnBlue            guibg=#008cff        ctermbg=darkcyan   guifg=#cccccc ctermfg=white
 hi  OnDarkBlue        guibg=#0045ff        ctermbg=blue       guifg=#cccccc ctermfg=white
 hi  OnPurple          guibg=#5555ff        ctermbg=blue       guifg=#cccccc ctermfg=white
-hi  OnRed             guibg=#ff3c3c        ctermbg=red        guifg=#cccccc ctermfg=white
+hi  OnRed             guibg=#e53c3c        ctermbg=red        guifg=#cccccc ctermfg=white
 hi  OnOrange          guibg=#aa5500        ctermbg=darkyellow guifg=#cccccc ctermfg=white
 hi  ItalicOnLightOrange    guibg=#ee8800        ctermbg=darkyellow guifg=#ffffff ctermfg=white
 hi  ItalicOnLightOrange    gui=italic           cterm=italic
@@ -77,7 +77,7 @@ hi!  link  PMenu                      OnDarkGray3
 hi!  link  PMenuSel                   OnGreen
 hi!  link  DiffAdd                    OnGreen
 hi!  link  DiffChange                 OnOrange
-hi!  link  DiffRemove                 OnRed
+hi!  link  DiffDelete                 OnRed
 hi!  link  DiffText                   ItalicOnLightOrange
 hi!  link  Folded                     OnGreen
 hi!  link  StatusLineNormalMode       OnOrange
@@ -136,8 +136,10 @@ hi!  link  cTypeTag                   Type
 hi!  link  cPreProcTag                PreProc
 hi!  link  cFunctionTag               Function
 hi!  link  cBoolean                   Keyword
+hi!  link  cStructure                 Keyword
 hi!  link  cppSTLnamespace            Type
 hi!  link  cppStructure               Keyword
+hi!  link  cppModifier                Keyword
 
 hi!  link  NERDTreePart               Normal
 hi!  link  NERDTreePartFile           Normal
