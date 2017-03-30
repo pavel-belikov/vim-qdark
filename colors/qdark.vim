@@ -54,6 +54,7 @@ hi  Magenta      ctermfg=magenta      guifg=#ff8bff
 hi  Purple       ctermfg=darkmagenta  guifg=#ba55d3
 hi  Orange       ctermfg=darkyellow   guifg=#aa5500
 hi  DarkCyan     ctermfg=darkcyan     guifg=#0ecbcb
+hi  Blue         ctermfg=blue         guifg=#87cefa
 
 " TODO {{{2
 hi  Scrollbar  ctermfg=cyan         ctermbg=darkcyan  guifg=#55ffff  guibg=#008cff
@@ -124,7 +125,7 @@ hi!  link   Repeat                Statement
 hi!  link   Label                 Statement
 hi!  link   Keyword               Statement
 hi!  link   Exception             Statement
-hi!  link   Include               PreProc
+hi!  link   Include               Blue
 hi!  link   Define                PreProc
 hi!  link   Macro                 PreProc
 hi!  link   PreCondit             PreProc
