@@ -19,31 +19,36 @@ hi Visual guifg=#cccccc guibg=#004588
 " Background {{{2
 hi  OnDarkGreen          guibg=#086008  ctermbg=darkgreen   guifg=#cccccc  ctermfg=white
 hi  OnDarkBlue           guibg=#0045ff  ctermbg=darkblue    guifg=#cccccc  ctermfg=white
-hi  OnBlue               guibg=#5555ff  ctermbg=blue        guifg=#cccccc  ctermfg=white
 hi  OnDarkRed            guibg=#e53c3c  ctermbg=darkred     guifg=#cccccc  ctermfg=white
 hi  OnOrange             guibg=#aa5500  ctermbg=darkyellow  guifg=#cccccc  ctermfg=white
+hi  ItalicOnLightOrange  guibg=#ee8800  guifg=#ffffff       gui=italic     cterm=italic
 
 if &t_Co == 256
-    hi ItalicOnLightOrange  ctermbg=202           ctermfg=231
+    hi  OnDarkGreen          ctermbg=22
+    hi  ItalicOnLightOrange  ctermbg=202    ctermfg=231
 else
-    hi ItalicOnLightOrange  ctermbg=darkyellow    ctermfg=white
+    hi  OnDarkGreen          ctermbg=darkgreen
+    hi  ItalicOnLightOrange  ctermbg=darkyellow  ctermfg=white
 endif
 
-hi ItalicOnLightOrange gui=italic cterm=italic guibg=#ee8800 guifg=#ffffff
 
 if &t_Co == 256
-    hi  OnDarkGray             ctermbg=234  guibg=#222222
-    hi  OnDarkGray2            ctermbg=235  guibg=#252525
-    hi  OnDarkGray3            ctermbg=236  guibg=#303030
-    hi  LightGreenOnDarkGray3  ctermbg=236  guibg=#303030
+    hi  OnDarkGray             ctermbg=234
+    hi  OnDarkGray2            ctermbg=235
+    hi  OnDarkGray3            ctermbg=236
+    hi  LightGreenOnDarkGray3  ctermbg=236
 else
-    hi  OnDarkGray             ctermbg=darkgray  guibg=#222222
-    hi  OnDarkGray2            ctermbg=darkgray  guibg=#252525
-    hi  OnDarkGray3            ctermbg=darkgray  guibg=#303030
-    hi  LightGreenOnDarkGray3  ctermbg=darkgray  guibg=#303030
+    hi  OnDarkGray             ctermbg=darkgray
+    hi  OnDarkGray2            ctermbg=darkgray
+    hi  OnDarkGray3            ctermbg=darkgray
+    hi  LightGreenOnDarkGray3  ctermbg=darkgray
 endif
 
-hi  LightGreenOnDarkGray3  ctermfg=green   guifg=#50ff50
+hi  OnDarkGray             guibg=#222222
+hi  OnDarkGray2            guibg=#252525
+hi  OnDarkGray3            guibg=#303030
+hi  LightGreenOnDarkGray3  guibg=#303030
+hi  LightGreenOnDarkGray3  ctermfg=green  guifg=#50ff50
 
 " Foreground {{{2
 hi  LightGreen   ctermfg=green        guifg=#50ff50
@@ -75,7 +80,7 @@ hi!  link   Directory             DarkCyan
 hi!  link   ErrorMsg              OnDarkRed
 hi!  link   Search                OnOrange
 hi!  link   MoreMsg               OnDarkGreen
-hi!  link   ModeMsg               OnBlue
+hi!  link   ModeMsg               OnDarkBlue
 hi!  link   LineNr                LightGreenOnDarkGray3
 hi!  link   CursorLineNr          LightYellow
 hi!  link   ColorColumn           OnDarkGray3
@@ -100,7 +105,7 @@ hi!  link   CursorColumn          OnDarkGray2
 hi!  link   MatchParen            LightRed
 hi!  link   TabLine               OnDarkGray
 hi!  link   TabLineFill           OnDarkGray3
-hi!  link   TabLineSel            OnBlue
+hi!  link   TabLineSel            OnDarkBlue
 hi!  link   PMenu                 OnDarkGray3
 hi!  link   PMenuSel              OnDarkGreen
 hi!  link   DiffAdd               OnDarkGreen
