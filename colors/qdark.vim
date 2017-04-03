@@ -10,11 +10,14 @@ let g:colors_name = "qdark"
 hi  Normal     ctermfg=white        ctermbg=black     guifg=#cccccc  guibg=#202020
 if &t_Co == 256
     hi Visual ctermfg=white ctermbg=27
+    hi Cursor ctermfg=white ctermbg=34
 else
     hi Visual ctermfg=white ctermbg=darkblue
+    hi Cursor ctermfg=white ctermbg=darkgreen
 endif
 
 hi Visual guifg=#cccccc guibg=#004588
+hi Cursor guifg=#cccccc guibg=#00aa00
 
 " Background {{{2
 hi  OnDarkGreen          guibg=#086008  ctermbg=darkgreen   guifg=#cccccc  ctermfg=white
@@ -30,7 +33,6 @@ else
     hi  OnDarkGreen          ctermbg=darkgreen
     hi  ItalicOnLightOrange  ctermbg=darkyellow  ctermfg=white
 endif
-
 
 if &t_Co == 256
     hi  OnDarkGray             ctermbg=234
@@ -72,7 +74,6 @@ hi  EnumConstant  ctermfg=green  guifg=#90ee90 cterm=italic gui=italic
 
 " Basic mappings {{{2
 hi!  link   Title                 Purple
-hi!  link   Cursor                OnDarkGreen
 hi!  link   VertSplit             LightGreenOnDarkGray3
 hi!  link   SpecialKey            LightRed
 hi!  link   NonText               LightRed
@@ -117,8 +118,8 @@ hi!  link   StatusLineNormalMode  OnOrange
 hi!  link   StatusLineInsertMode  OnDarkGreen
 hi!  link   StatusLineVisualMode  OnDarkRed
 hi!  link   ExtraWhitespace       OnDarkRed
-hi!  link   SignColumn            OnDarkGray
-hi!  link   FoldColumn            OnDarkGray
+hi!  link   SignColumn            OnDarkGray3
+hi!  link   FoldColumn            OnDarkGray3
 hi!  link   IncSearch             Visual
 hi!  link   Character             String
 hi!  link   Number                Constant
@@ -129,7 +130,7 @@ hi!  link   Conditional           Statement
 hi!  link   Repeat                Statement
 hi!  link   Label                 Statement
 hi!  link   Keyword               Statement
-hi!  link   Exception             Statement
+hi!  link   Exception             Keyword
 hi!  link   Include               Blue
 hi!  link   Define                PreProc
 hi!  link   Macro                 PreProc
@@ -146,13 +147,21 @@ hi!  link   Debug                 Special
 
 " Language mappings {{{1
 " C, C++ {{{2
-hi!  link  cEnumTag      Type
-hi!  link  cMemberTag    Type
-hi!  link  cTypeTag      Type
-hi!  link  cPreProcTag   PreProc
-hi!  link  cFunctionTag  Function
-hi!  link  cBoolean      Keyword
-hi!  link  cppModifier   Keyword
+hi!  link  cEnumTag            Type
+hi!  link  cMemberTag          Type
+hi!  link  cTypeTag            Type
+hi!  link  cPreProcTag         PreProc
+hi!  link  cFunctionTag        Function
+hi!  link  cBoolean            Keyword
+hi!  link  cppModifier         Keyword
+hi!  link  cppSTLnamespace     Namespace
+hi!  link  cppSTLtype          Type
+hi!  link  cppSTLiterator      Type
+hi!  link  cppSTLiterator_tag  Type
+hi!  link  cppSTLexception     Type
+
+" Python {{{2
+hi!  link  pythonExceptions Type
 
 " Plugin mappings {{{1
 " vim-indent-guides {{{2
