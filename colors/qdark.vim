@@ -1,3 +1,5 @@
+" vim:foldlevel=1:
+
 hi clear
 set background=dark
 if exists("syntax_on")
@@ -24,6 +26,7 @@ hi  OnDarkGreen          guibg=#086008  ctermbg=darkgreen   guifg=#cccccc  cterm
 hi  OnDarkBlue           guibg=#0045ff  ctermbg=darkblue    guifg=#cccccc  ctermfg=white
 hi  OnDarkRed            guibg=#e53c3c  ctermbg=darkred     guifg=#cccccc  ctermfg=white
 hi  OnOrange             guibg=#aa5500  ctermbg=darkyellow  guifg=#cccccc  ctermfg=white
+hi  OnYellow             guibg=#ffff30  ctermbg=yellow      guifg=#cccccc  ctermfg=white
 hi  ItalicOnLightOrange  guibg=#ee8800  guifg=#ffffff       gui=italic     cterm=italic
 
 if &t_Co == 256
@@ -69,7 +72,12 @@ hi  Menu       ctermfg=black        ctermbg=blue      guifg=#0c0c0c  guibg=#55ff
 
 " Semantic syntax highlighting {{{2
 hi  Namespace     ctermfg=green  guifg=#50ff50
-hi  Member        cterm=italic   ctermfg=cyan   gui=italic  guifg=#6ad8b8
+hi  Member        cterm=italic   gui=italic  guifg=#6ad8b8
+if &t_Co == 256
+    hi Member ctermfg=49
+else
+    hi Member ctermfg=darkcyan
+endif
 hi  EnumConstant  ctermfg=green  guifg=#90ee90 cterm=italic gui=italic
 
 " Basic mappings {{{2
@@ -148,7 +156,7 @@ hi!  link   Debug                 Special
 " Language mappings {{{1
 " C, C++ {{{2
 hi!  link  cEnumTag            Type
-hi!  link  cMemberTag          Type
+hi!  link  cMemberTag          Member
 hi!  link  cTypeTag            Type
 hi!  link  cPreProcTag         PreProc
 hi!  link  cFunctionTag        Function
@@ -209,7 +217,10 @@ hi!  link  NERDTreeFlag             Ignore
 hi!  link  NERDTreeRO               WarningMsg
 hi!  link  NERDTreeBookmark         Statement
 hi!  link  NERDTreeCurrentNode      Search
-" 1}}}
 
-" vim:foldlevel=1:
+" PVS-Studio {{{1
+" hi! link PvsStudioListLevel0 OnDarkRed
+" hi! link PvsStudioListLevel1 OnDarkRed
+" hi! link PvsStudioListLevel2 OnOrange
+" hi! link PvsStudioListLevel3 OnYellow
 
