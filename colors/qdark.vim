@@ -2,10 +2,10 @@
 
 hi clear
 set background=dark
-if exists("syntax_on")
+if exists('syntax_on')
     syntax reset
 endif
-let g:colors_name = "qdark"
+let g:colors_name = 'qdark'
 
 " Basic colors {{{1
 " Modes {{{2
@@ -24,17 +24,17 @@ hi Cursor guifg=#cccccc guibg=#00aa00
 " Background {{{2
 hi  OnDarkGreen          guibg=#086008  ctermbg=darkgreen   guifg=#cccccc  ctermfg=white
 hi  OnDarkBlue           guibg=#0045ff  ctermbg=darkblue    guifg=#cccccc  ctermfg=white
+hi  DarkGreenOnDarkBlue  guifg=#086008  ctermfg=darkgreen   guibg=#0045ff  ctermbg=darkblue
+hi  OrangeOnDarkBlue     guifg=#aa5500  ctermfg=darkyellow  guibg=#0045ff  ctermbg=darkblue
 hi  OnDarkRed            guibg=#e53c3c  ctermbg=darkred     guifg=#cccccc  ctermfg=white
 hi  OnOrange             guibg=#aa5500  ctermbg=darkyellow  guifg=#cccccc  ctermfg=white
 hi  OnYellow             guibg=#ffff30  ctermbg=yellow      guifg=#cccccc  ctermfg=white
-hi  ItalicOnLightOrange  guibg=#ee8800  guifg=#ffffff       gui=italic     cterm=italic
+hi  ItalicOnLightOrange  guibg=#ee8800  ctermbg=darkyellow  guifg=#ffffff  ctermfg=white     gui=italic     cterm=italic
 
 if &t_Co == 256
     hi  OnDarkGreen          ctermbg=22
+    hi  DarkGreenOnDarkBlue  ctermfg=22
     hi  ItalicOnLightOrange  ctermbg=202    ctermfg=231
-else
-    hi  OnDarkGreen          ctermbg=darkgreen
-    hi  ItalicOnLightOrange  ctermbg=darkyellow  ctermfg=white
 endif
 
 if &t_Co == 256
@@ -96,6 +96,11 @@ hi!  link   ColorColumn           OnDarkGray3
 hi!  link   Question              OnDarkGreen
 hi!  link   StatusLine            OnDarkBlue
 hi!  link   StatusLineNC          OnDarkGray
+hi!  link   StatusLineNormalMode     OnDarkBlue
+hi!  link   StatusLineInsertMode     OnDarkGreen
+hi!  link   StatusLineInsertModeSep  DarkGreenOnDarkBlue
+hi!  link   StatusLineVisualMode     OnOrange
+hi!  link   StatusLineVisualModeSep  OrangeOnDarkBlue
 hi!  link   WarningMsg            OnDarkRed
 hi!  link   Comment               LightCyan
 hi!  link   Constant              LightRed
@@ -122,9 +127,6 @@ hi!  link   DiffChange            OnOrange
 hi!  link   DiffDelete            OnDarkRed
 hi!  link   DiffText              ItalicOnLightOrange
 hi!  link   Folded                OnDarkGreen
-hi!  link   StatusLineNormalMode  OnOrange
-hi!  link   StatusLineInsertMode  OnDarkGreen
-hi!  link   StatusLineVisualMode  OnDarkRed
 hi!  link   ExtraWhitespace       OnDarkRed
 hi!  link   SignColumn            OnDarkGray3
 hi!  link   FoldColumn            OnDarkGray3
@@ -217,10 +219,4 @@ hi!  link  NERDTreeFlag             Ignore
 hi!  link  NERDTreeRO               WarningMsg
 hi!  link  NERDTreeBookmark         Statement
 hi!  link  NERDTreeCurrentNode      Search
-
-" PVS-Studio {{{1
-" hi! link PvsStudioListLevel0 OnDarkRed
-" hi! link PvsStudioListLevel1 OnDarkRed
-" hi! link PvsStudioListLevel2 OnOrange
-" hi! link PvsStudioListLevel3 OnYellow
 
