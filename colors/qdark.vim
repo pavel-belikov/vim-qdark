@@ -169,6 +169,7 @@ hi!  link  cppSTLtype          Type
 hi!  link  cppSTLiterator      Type
 hi!  link  cppSTLiterator_tag  Type
 hi!  link  cppSTLexception     Type
+hi!  link  cppType             Keyword
 
 " Python {{{2
 hi!  link  pythonExceptions Type
