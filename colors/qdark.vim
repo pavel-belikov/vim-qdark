@@ -154,6 +154,7 @@ hi!  link   SpecialChar           Special
 hi!  link   Delimiter             Special
 hi!  link   SpecialComment        Special
 hi!  link   Debug                 Special
+hi! link    SpellBad              Text
 
 " Language mappings {{{1
 " C, C++ {{{2
